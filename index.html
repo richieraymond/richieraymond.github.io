@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+           </head>
+    <body>
+	<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+     <h1>KERA BLOG</h1>
+
+    </div>
+</nav>
+<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+    
+		<form>
+    <fieldset class="uk-fieldset">
+        <legend class="uk-legend">Add Blog Post</legend>
+        <div class="uk-margin">
+            <input class="uk-input" id="postTitle" type="text" autofocus placeholder="Enter Title...">
+        </div>
+        <div class="uk-margin">
+            <textarea class="uk-textarea" id="postBody" rows="5" placeholder="Type Your Content Here......"></textarea>
+        </div>
+		  <div class="uk-margin">
+            <button class="uk-button uk-button-primary" type="button" id="submitButton">Post</button>
+            <button class="uk-button uk-button-primary" type="button" id="submitButton">View Posts</button>
+        </div>
+    </fieldset>
+</form>
+<table class="uk-table uk-table-divider" id="blogTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Table Data</td>
+            <td>Table Data</td>
+            <td>Table Data</td>
+        </tr>
+    </tbody>
+</table>
+		</div>
+    </div>
+</div>
+        <script src="js/uikit-icons.min.js"></script>
+        <script src="js/uikit.min.js"></script>
+		<script  src="js/main.js"></script>
+    </body>
+</html>
+
