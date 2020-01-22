@@ -16,6 +16,11 @@ submitButton.addEventListener('click',(e)=>{
 	let postObj = {title:title,body:body};
 	postArray.push(postObj);
 	localStorage.setItem('blogPosts',JSON.stringify(postArray))
+	let blogs = JSON.parse(localStorage.getItem('blogPosts'));
+	
+
+
+	
 	console.log(localStorage.getItem('blogPosts'))
 });
 
