@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.min.css" />
+       
+
            </head>
     <body>
 	<nav class="uk-navbar-container" uk-navbar>
@@ -13,6 +15,22 @@
 
     </div>
 </nav>
+
+<div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <p>Are you sure you want to delete this post? This action can not be reversed</p>
+        <button type="button" class="uk-button uk-button-primary" id="confirmAction">Yes</button>
+        <button type="button" class="uk-button uk-button-danger" id="declineAction">No</button>
+
+    </div>
+</div>
+<div class="uk-alert-success" uk-alert id="alert" style="display: none;">
+    <a class="uk-alert-close" uk-close></a>
+    <p id="alertContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+</div>
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">
@@ -28,32 +46,30 @@
         </div>
 		  <div class="uk-margin">
             <button class="uk-button uk-button-primary" type="button" id="submitButton">Post</button>
-            <button class="uk-button uk-button-primary" type="button" id="submitButton">View Posts</button>
+            <button class="uk-button uk-button-primary" type="button" id="viewButton">View Posts</button>
         </div>
     </fieldset>
 </form>
-<table class="uk-table uk-table-divider" id="blogTable">
+Total Posts:<span class="uk-badge" id="totalPosts"></span>
+<table class="uk-table uk-table-striped" id="blogTable">
     <thead>
         <tr>
             <th>#</th>
             <th>Title</th>
             <th>Description</th>
+            <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+    <tbody id="tableBody">
     </tbody>
 </table>
 		</div>
     </div>
 </div>
-        <script src="js/uikit-icons.min.js"></script>
-        <script src="js/uikit.min.js"></script>
-		<script  src="js/main.js"></script>
+<script src="js/uikit.min.js"></script>
+<script src="js/uikit-icons.min.js"></script>
+<script   src="js/main.js"></script >
+
     </body>
 </html>
 
