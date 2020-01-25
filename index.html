@@ -11,6 +11,7 @@
     <body>
 	<nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
+        
      <h1>KERA BLOG</h1>
 
     </div>
@@ -29,13 +30,18 @@
 </div>
 <div class="uk-alert-success" uk-alert id="alert" style="display: none;">
     <a class="uk-alert-close" uk-close></a>
-    <p id="alertContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+    <p id="alertContent"></p>
 </div>
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div>
+<div class="uk-margin">
+    <button class="uk-button uk-button-primary" type="button" id="addPost">Add Post</button>
+    <button class="uk-button uk-button-primary" type="button" id="viewButton">View Posts</button>
+</div>
+</div>
+<div class="uk-child-width-expand@s uk-text-center" uk-grid ">
         <div class="uk-card uk-card-default uk-card-body">
     
-		<form>
+		<form id="blogform" style="display: none;">
     <fieldset class="uk-fieldset">
         <legend class="uk-legend">Add Blog Post</legend>
         <div class="uk-margin">
@@ -44,14 +50,16 @@
         <div class="uk-margin">
             <textarea class="uk-textarea" id="postBody" rows="5" placeholder="Type Your Content Here......"></textarea>
         </div>
-		  <div class="uk-margin">
-            <button class="uk-button uk-button-primary" type="button" id="submitButton">Post</button>
-            <button class="uk-button uk-button-primary" type="button" id="viewButton">View Posts</button>
-        </div>
+        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary" type="button" id="submitButton">Post</button>
+                <button class="uk-button uk-button-primary" type="button" id="clearForm">Clear</button>
+            </div>
     </fieldset>
 </form>
+<div id="blogTable" style="display: none;">
 Total Posts:<span class="uk-badge" id="totalPosts"></span>
-<table class="uk-table uk-table-striped" id="blogTable">
+<table class="uk-table uk-table-large uk-table-striped uk-table-justify" >
     <thead>
         <tr>
             <th>#</th>
@@ -63,8 +71,8 @@ Total Posts:<span class="uk-badge" id="totalPosts"></span>
     <tbody id="tableBody">
     </tbody>
 </table>
-		</div>
-    </div>
+</div>
+</div>
 </div>
 <script src="js/uikit.min.js"></script>
 <script src="js/uikit-icons.min.js"></script>
