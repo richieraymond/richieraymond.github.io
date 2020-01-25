@@ -21,6 +21,10 @@ postBody.addEventListener('change',(e)=>{
 	body = e.target.value;
 });
 submitButton.addEventListener('click',(e)=>{
+	if(title==null || body==null){
+		showAlert('alertDanger','Both post title and body are required','alertDangerContent');
+		return;
+	}
 	postObj={blogTitle:title,blogBody:body};
 	if(rowIndex){
 		let itemIndex = parseInt(rowIndex)-1;

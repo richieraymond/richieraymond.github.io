@@ -32,6 +32,11 @@
     <a class="uk-alert-close" uk-close></a>
     <p id="alertContent"></p>
 </div>
+</div>
+<div class="uk-alert-danger" uk-alert id="alertDanger" style="display: none;">
+    <a class="uk-alert-close" uk-close></a>
+    <p id="alertDangerContent"></p>
+</div>
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
 <div class="uk-margin">
     <button class="uk-button uk-button-primary" type="button" id="addPost">Add Post</button>
@@ -45,10 +50,10 @@
     <fieldset class="uk-fieldset">
         <legend class="uk-legend">Add Blog Post</legend>
         <div class="uk-margin">
-            <input class="uk-input" id="postTitle" type="text" autofocus placeholder="Enter Title...">
+            <input class="uk-input" required id="postTitle" type="text" autofocus placeholder="Enter Title...">
         </div>
         <div class="uk-margin">
-            <textarea class="uk-textarea" id="postBody" rows="5" placeholder="Type Your Content Here......"></textarea>
+            <textarea class="uk-textarea" required id="postBody" rows="5" placeholder="Type Your Content Here......"></textarea>
         </div>
         <div class="uk-child-width-expand@s uk-text-center" uk-grid>
             <div class="uk-margin">
